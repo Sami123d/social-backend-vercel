@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(morgan("common"));
 app.use (helmet());
 // jo bhi chez hoti hai vo app.use se guzarti hai 
-
+app.get("/test", (req, res)=>{res.send("server is running")});
 // share.jsx form work
 const storage = multer.diskStorage({destination: (req, file, cb)=> {
   cb(null, "public/images");
