@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI)
   });
 
 // MIDDLEWARE
-app.use(cors({origin: ["https://social-frontend-vercel.vercel.app"]}));
+app.use(cors({origin: ["https://social-frontend-vercel.vercel.app", "http://localhost:5173"]}));
 app.use(express.json());
 app.use(morgan("common"));
 app.use (helmet());
